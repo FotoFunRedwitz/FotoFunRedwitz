@@ -1,0 +1,446 @@
+/* Scroll effect for smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Button hover effect */
+.button {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+    background-color: #555;  /* Slightly lighter shade for hover effect */
+    transform: scale(1.05);   /* Slightly enlarge the button when hovered */
+}
+
+/* Link focus effect */
+a:focus {
+    outline: 3px solid #333; /* Adds a clear focus outline */
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 300px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    font-size: 1.8rem;
+}
+
+.nav-links li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.primary-button {
+    background-color: #333;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Hamburger Menu for mobile view */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger-menu div {
+    width: 30px;
+    height: 4px;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #f0f0f0;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    margin-bottom: 20px;
+}
+
+.hero-button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Steps Section */
+.steps {
+    text-align: center;
+    padding: 50px;
+    background-color: #f9f9f9;
+}
+
+.steps h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: #2E443D;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    margin-top: 30px;
+    padding: 20px 0;
+}
+
+.step {
+    text-align: center;
+    width: 200px;
+    position: relative;
+    z-index: 1; /* Icons und Texte über der Linie anzeigen */
+    padding-top: 20px; /* Abstand zur Linie für Texte */
+}
+
+.step-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    background-color: white; /* Hintergrund, damit es sich von der Linie abhebt */
+}
+
+.step h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2E443D;
+    margin-bottom: 5px;
+}
+
+.step p {
+    color: #333;
+    font-size: 0.9rem;
+}
+
+/* Hintergrundlinie hinter den Icons */
+.steps-container::before {
+    content: "";
+    position: absolute;
+    top: 50%; /* Positionierung der Linie genau in der Mitte der Icons */
+    left: 5%;
+    width: 90%;
+    height: 2px;
+    background-color: #2E443D;
+    z-index: 0; /* Linie hinter den Icons anzeigen */
+    transform: translateY(-50%); /* Linie zentrieren */
+}
+
+/* Packages Section */
+.packages {
+    text-align: center;
+    padding: 50px;
+}
+
+.packages h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.package-cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.package-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.package-card_lite {
+    background-color: green;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.package-card_basic {
+    background-color: blue;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.package-card_premium {
+    background-color: orange;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.package-card h3 {
+    font-size: 1.5rem;
+}
+
+.package-card p {
+    margin: 10px 0;
+}
+
+.package-button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    place-items: center; /* Zentriert den Button horizontal */
+}
+
+.price {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    background-color: #333;
+    color: #fff;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#contact-form-section {
+    padding: 30px;
+    background-color: #f9f9f9;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border: 2px solid #D1E4E4;
+}
+
+#contact-form-section h1 {
+    font-size: 3.0rem;
+    text-align: center;
+    color: #2E443D;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-column {
+    width: 48%;
+}
+
+.form-column h2 {
+    color: #2E443D;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+label {
+    font-size: 1rem;
+    color: #2E443D;
+    display: block;
+    margin-top: 10px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.checkbox-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.checkbox-group label {
+    font-size: 1rem;
+    color: #2E443D;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #2E443D;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+    background-color: #1C2D26;
+}
+
+input[readonly] {
+    color: #A9A9A9; /* Hellgrau für readonly Felder */
+}
+
+.calendar-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.calendar-container label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.calendar {
+    width: 100%;
+    height: 400px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li a {
+        padding: 10px;
+        background-color: #f0f0f0;
+        width: 100%;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .steps-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .package-cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-section {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .steps-container {
+        gap: 10px;
+    }
+
+    .package-card {
+        width: 100%;
+    }
+}

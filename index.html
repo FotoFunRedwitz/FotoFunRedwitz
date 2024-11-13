@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FotoFunRedwitz</title>
-    <link rel="stylesheet" href="Test1.css">
+    <link rel="stylesheet" href="Style.css">
 </head>
 <body>
 
@@ -12,93 +12,206 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="logo.png" alt="FotoFunRedwitz Logo" class="logo-img">
-                FotoFunRedwitz
+                <img src="Logo.png" alt="FotoFunRedwitz Logo" class="logo-img">
+            </div>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
             <ul class="nav-links">
-                <li><a href="#">Die Fotobox</a></li>
-                <li><a href="#">FotoFun Pakete</a></li>
-                <li><a href="#">Bestellablauf</a></li>
-                <li><a href="#">FAQ</a></li>
+                <li><a href="#hero">Die Fotobox</a></li>
+                <li><a href="#packages">FotoFun Pakete</a></li>
+                <li><a href="#steps">Bestellablauf</a></li>
+                <li><a href="#footer">FAQ</a></li>
             </ul>
-            <a href="#" class="button primary-button">Jetzt Anfragen</a>
+            <a href="#contact" class="button primary-button">Jetzt Anfragen</a>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="hero">
         <div class="hero-content">
             <h1>Fotobox von FotoFunRedwitz mieten...</h1>
             <p>... und deine Gäste zum Strahlen bringen</p>
-            <a href="#" class="button hero-button">Jetzt Anfragen</a>
+            <a href="#contact" class="button hero-button">Jetzt Anfragen</a>
         </div>
         <div class="hero-image">
             <div class="placeholder">Platzhalter für Bild</div>
         </div>
     </section>
 
-    <!-- Steps Section -->
     <section class="steps">
         <h2>FotoFun buchen. So einfach geht’s</h2>
         <div class="steps-container">
             <div class="step">
-                <img src="icon1.png" alt="Verfügbarkeit Icon">
-                <p>Prüfe deine Verfügbarkeit</p>
+                <img src="Bild4.png" alt="Verfügbarkeit Icon" class="step-icon">
+                <h3>Prüfe deine Verfügbarkeit</h3>
+                <p>Wir prüfen, ob die Fotobox an deinem Datum frei ist</p>
             </div>
             <div class="step">
-                <img src="icon2.png" alt="Fotobox Icon">
-                <p>Buche deine Fotobox</p>
+                <img src="Bild2.png" alt="Fotobox Icon" class="step-icon">
+                <h3>Buche deine Fotobox</h3>
+                <p>Entscheide dich für ein FotoFun-Paket und sende deine Anfrage an uns</p>
             </div>
             <div class="step">
-                <img src="icon3.png" alt="Ausdrucke Icon">
-                <p>Gestalte deine Ausdrucke</p>
+                <img src="Bild3.png" alt="Ausdrucke Icon" class="step-icon">
+                <h3>Gestalte deine Ausdrucke</h3>
+                <p>Zusammen erstellen wir dein Wunschlayout</p>
             </div>
             <div class="step">
-                <img src="icon4.png" alt="Feier Icon">
-                <p>Genieße deine Feier</p>
+                <img src="Bild1.png" alt="Feier Icon" class="step-icon">
+                <h3>Genieße deine Feier</h3>
+                <p>Wir übernehmen den Aufbau der Fotobox</p>
             </div>
         </div>
     </section>
+    
 
     <!-- Packages Section -->
-    <section class="packages">
+    <section class="packages" id="packages">
         <h2>Wähle dein FotoFun Paket</h2>
         <div class="package-cards">
-            <div class="package-card lite">
+            <div class="package-card_lite">
                 <h3>Lite</h3>
-                <p>Digital<br>Ohne Drucker</p>
+                <p>Digital.<br>Ohne Drucker.</p>
                 <ul>
                     <li>Professionelle Spiegelreflex-Kamera</li>
-                    <li>...</li>
+                    <li>Leistungsstarker Studioblitz</li>
+                    <li>Live-View mit Echtzeit-Vorschau</li>
+                    <li>Inklusive Wunschlayout</li>
+                    <li>SMS/Email Funktion</li>
+                    <li>Lustige Requisiten</li>
+                    <li>Auf- & Abbau der Fotobox (30km Radius inklusive*)</li>
+                    <li>Download aller Bilder per USB-Stick/Cloud</li>
                 </ul>
-                <button class="button package-button">Anfragen</button>
                 <p class="price">199,- €</p>
+                <button class="button package-button">Anfragen</button>
             </div>
-            <div class="package-card basic">
+            <div class="package-card_basic">
                 <h3>Basic</h3>
-                <p>Highspeed-Drucker<br>Mit 200 Ausdrucken</p>
+                <p>Highspeed-Drucker.<br>Mit 200 Ausdrucken.</p>
                 <ul>
                     <li>Professionelle Spiegelreflex-Kamera</li>
-                    <li>...</li>
+                    <li>Leistungsstarker Studioblitz</li>
+                    <li>Live-View mit Echtzeit-Vorschau</li>
+                    <li>Inklusive Wunschlayout</li>
+                    <li>SMS/Email Funktion</li>
+                    <li>Lustige Requisiten</li>
+                    <li>Auf- & Abbau der Fotobox (30km Radius inklusive*)</li>
+                    <li>Download aller Bilder per USB-Stick/Cloud</li>
+                    <li>Highspeed-Drucker (ca. 10s je Ausdruck)</li>
+                    <li>200 Ausdrucke im Format 10x15cm (oder 400 Audrucke im Format 5x15cm)</li>
+                    <li>Mehrstreifen-Drucke werden automatisch geschnitten</li>
                 </ul>
-                <button class="button package-button">Anfragen</button>
                 <p class="price">239,- €</p>
+                <button class="button package-button">Anfragen</button>
             </div>
-            <div class="package-card premium">
+            <div class="package-card_premium">
                 <h3>Premium</h3>
-                <p>Highspeed-Drucker<br>Mit Druckflatrate</p>
+                <p>Highspeed-Drucker.<br>Mit Druckflatrate.</p>
                 <ul>
                     <li>Professionelle Spiegelreflex-Kamera</li>
-                    <li>...</li>
+                    <li>Leistungsstarker Studioblitz</li>
+                    <li>Live-View mit Echtzeit-Vorschau</li>
+                    <li>Inklusive Wunschlayout</li>
+                    <li>SMS/Email Funktion</li>
+                    <li>Lustige Requisiten</li>
+                    <li>Auf- & Abbau der Fotobox (30km Radius inklusive*)</li>
+                    <li>Download aller Bilder per USB-Stick/Cloud</li>
+                    <li>Highspeed-Drucker (ca. 10s je Ausdruck)</li>
+                    <li>Unbegrenzt Ausdrucke (Ausreichend Ersatzpapier dabei)</li>
+                    <li>Mehrstreifen-Drucke werden automatisch geschnitten</li>
                 </ul>
-                <button class="button package-button">Anfragen</button>
                 <p class="price">269,- €</p>
+                <button class="button package-button">Anfragen</button>
             </div>
         </div>
     </section>
 
+
+   <section id="contact-form-section">
+    <h1>Deine Anfrage</h1>
+    <form id="contact-form" action="send_mail.php" method="POST">
+        <div class="form-group">
+            <div class="form-column">
+                <h2>Deine Kontaktdaten</h2>
+
+                <label for="first-name">Vorname*</label>
+                <input type="text" id="first-name" name="first-name" required>
+
+                <label for="last-name">Nachname*</label>
+                <input type="text" id="last-name" name="last-name" required>
+
+                <label for="email">Email*</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Telefon*</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="street">Straße*</label>
+                <input type="text" id="street" name="street" required>
+
+                <label for="house-number">Hausnummer*</label>
+                <input type="text" id="house-number" name="house-number" required>
+
+                <label for="zip">Postleitzahl*</label>
+                <input type="text" id="zip" name="zip" required>
+
+                <label for="city">Ort*</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+
+            <div class="form-column">
+                <h2>Dein Event</h2>
+
+                <label for="event-type">Anlass*</label>
+                <select id="event-type" name="event-type" required>
+                    <option value="">Bitte auswählen</option>
+                    <option value="Hochzeit">Hochzeit</option>
+                    <option value="Firmenevent">Firmenevent</option>
+                    <option value="Geburtstag">Geburtstag</option>
+                    <option value="Weitere">Weitere</option>
+                </select>
+
+                <label>Adresse identisch?</label>
+                <div class="checkbox-group">
+                    <label><input type="radio" name="same-address" value="ja" onclick="copyAddress(true)"> ja</label>
+                    <label><input type="radio" name="same-address" value="nein" onclick="copyAddress(false)"> nein</label>
+                </div>
+
+                <label for="event-street">Straße*</label>
+                <input type="text" id="event-street" name="event-street" placeholder="Übernommen" readonly>
+
+                <label for="event-house-number">Hausnummer*</label>
+                <input type="text" id="event-house-number" name="event-house-number" placeholder="Übernommen" readonly>
+
+                <label for="event-zip">Postleitzahl*</label>
+                <input type="text" id="event-zip" name="event-zip" placeholder="Übernommen" readonly>
+
+                <label for="event-city">Ort*</label>
+                <input type="text" id="event-city" name="event-city" placeholder="Übernommen" readonly>
+
+                <label for="message">Deine Nachricht an uns</label>
+                <textarea id="message" name="message" rows="4" placeholder="Sonderwünsche, Beginn der Feier etc."></textarea>
+            </div>
+        </div>
+
+        <div class="calendar-container">
+            <label for="date">Wunschtermin*</label>
+            <input type="date" id="date" name="date" required>
+        </div>
+        <button id="contact-submit" class="large-submit-button" type="submit">Absenden</button>
+
+    </form>
+</section>
+
+
+   
+    
+
     <!-- Footer -->
-    <footer>
+    <footer id="footer">
         <div class="footer-section">
             <h3>Rechtliches</h3>
             <ul>
@@ -114,6 +227,9 @@
             <p>FotoFunRedwitz<br>fotofunredwitz@gmail.com<br>017623492120</p>
         </div>
     </footer>
+
+
+    <script src="script.js"></script>
 
 </body>
 </html>
