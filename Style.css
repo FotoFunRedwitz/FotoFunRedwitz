@@ -29,6 +29,7 @@ a:focus {
 body {
     color: #333;
     line-height: 1.6;
+    margin-top:7%;
 }
 
 /* Header */
@@ -37,8 +38,18 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    height: 15%;
     background-color: #f8f8f8;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
+
+header.hidden {
+    top: -60px; /* Höheneinstellung anpassen, wenn der Header größer ist */
+  }
 
 .logo {
     display: flex;
@@ -176,81 +187,126 @@ body {
 
 /* Packages Section */
 .packages {
-    text-align: center;
-    padding: 50px;
+    padding-top: 60px;
+    padding: 30px;
+    max-width: 1400px;
+    margin: auto;
+    border-radius: 8px;
+
 }
 
 .packages h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 .package-cards {
     display: flex;
     justify-content: space-around;
-}
-
-.package-card {
-    border: 1px solid #ddd;
     padding: 20px;
     border-radius: 8px;
-    width: 400px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
 }
+
 
 .package-card_lite {
-    background-color: green;
+    background-color: #f9f9f9;
     border: 1px solid #ddd;
-    padding: 20px;
+    padding: 0;
     border-radius: 8px;
     width: 400px;
-    text-align: center;
+    height: 700px;
+    text-align: left;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+
+.package-card_lite_header{
+    background-color: #ed7966;
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    color: white;
+    border-radius: 8px;
 }
 
 .package-card_basic {
-    background-color: blue;
+    background-color: #f9f9f9;
     border: 1px solid #ddd;
-    padding: 20px;
     border-radius: 8px;
     width: 400px;
-    text-align: center;
+    text-align: left;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.package-card_basic_header{
+    background-color: #303179;
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    color: white;
+    border-radius: 8px;
 }
 
 .package-card_premium {
-    background-color: orange;
+    background-color: #f9f9f9;
     border: 1px solid #ddd;
-    padding: 20px;
     border-radius: 8px;
     width: 400px;
-    text-align: center;
+    text-align: left;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
-.package-card h3 {
-    font-size: 1.5rem;
+.package-card_premium_header{
+    background-color: #141850;
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    color: white;
+    border-radius: 8px;
 }
 
-.package-card p {
-    margin: 10px 0;
+.package-cards h3 {
+    font-size: 2rem;
+}
+
+.package-cards p {
+    margin: 10px;
+
+}
+
+.package-cards ul {
+    margin: 10px;
+    padding: 10px;
 }
 
 .package-button {
+    position: absolute;
     background-color: #333;
     color: #fff;
-    padding: 10px 15px;
-    border: none;
+    padding: 8px 15px;
     border-radius: 5px;
-    cursor: pointer;
-    display: flex;
-    place-items: center; /* Zentriert den Button horizontal */
+    text-decoration: none;
+    left: 50%;
+    transform: translate(-50%); /* Korrigiert die Verschiebung */
+    text-align: center;
+    width: 30%;
+    margin: 0 auto;
+    bottom: 10px;
 }
 
 .price {
-    font-size: 1.2rem;
+    position: absolute;
+    font-size: 2rem;
     margin-top: 10px;
+    text-align: center;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%); /* Korrigiert die Verschiebung */
 }
 
 /* Footer */
@@ -264,6 +320,7 @@ footer {
 
 .footer-section h3 {
     margin-bottom: 15px;
+    font-size: 1.5rem;
 }
 
 .footer-section ul {
@@ -443,4 +500,90 @@ input[readonly] {
     .package-card {
         width: 100%;
     }
+}
+
+/* Impressum spezifische Stile */
+.impressum-content {
+    font-family: Arial, sans-serif;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top:7%;
+    padding: 20px;
+    line-height: 1.6;
+    color: #000;
+}
+
+.impressum-content h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.impressum-content h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.impressum-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    
+}
+
+.impressum-content a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.impressum-content a:hover {
+    text-decoration: underline;
+}
+
+
+/* Datenschutz spezifische Stile */
+.datenschutz-content {
+    font-family: Arial, sans-serif;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top:7%;
+    padding: 20px;
+    line-height: 1.6;
+    color: #000;
+}
+
+.datenschutz-content h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.datenschutz-content h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.datenschutz-content h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.datenschutz-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.datenschutz-content li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-left: 5%
+}
+
+.datenschutz-content a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.datenschutz-content a:hover {
+    text-decoration: underline;
 }

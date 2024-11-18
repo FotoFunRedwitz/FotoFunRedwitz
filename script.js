@@ -22,6 +22,24 @@ function copyAddress(isSame) {
     document.getElementById("event-city").style.color = color;
 }
 
+//Header bei Runterscrollen verstecken, bei hochscrollen anzeigen
+let lastScrollTop = 0; // letzte Scroll-Position
+let header = document.querySelector('.navbar');
+
+window.addEventListener('scroll', function() {
+  let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (currentScroll > lastScrollTop) {
+
+    header.style.top = "-15%"; // Höhe des Headers
+  } else {
+    header.style.top = "0";
+  }
+
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Verhindert negatives Scrollen
+});
+
+
 document.getElementById("contactForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Verhindert das Absenden des Formulars
 
