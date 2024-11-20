@@ -40,6 +40,42 @@ window.addEventListener('scroll', function() {
 });
 
 
+// Array mit Texten, die angezeigt werden sollen
+const texts = [
+    "... und deine Gäste zum Strahlen bringen",
+    "... und einzigartige Erinnerungen schaffen",
+    "... und deine Feier unvergesslich machen",
+    "... und die Stimmung auf das nächste Level bringen"
+];
+
+let currentIndex = 0; // Startindex
+
+const textContainer = document.getElementById("answer_change");
+
+// Funktion zum Ändern des Textes
+function changeText() {
+    // Textcontainer ausblenden (sanfter Übergang)
+    textContainer.style.opacity = 0;
+
+    setTimeout(() => {
+        // Neuen Text setzen
+        textContainer.textContent = texts[currentIndex];
+
+        // Textcontainer einblenden
+        textContainer.style.opacity = 1;
+
+        // Index aktualisieren und zurücksetzen, falls am Ende des Arrays
+        currentIndex = (currentIndex + 1) % texts.length;
+    }, 500); // Zeit für die Ausblendung
+}
+
+// Start der Loop (alle 5 Sekunden)
+setInterval(changeText, 5000);
+
+// Initialen Text setzen
+changeText();
+
+
 document.getElementById("contactForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Verhindert das Absenden des Formulars
 
@@ -102,12 +138,7 @@ addressFields.forEach(field => {
 
 
 
-// Scrollen zum Wunschtermin prüfen Bereich bei Klick auf "Anfragen" Buttons
-document.querySelectorAll(".anfragen-button").forEach(button => {
-    button.addEventListener("click", function() {
-        document.getElementById("wunschtermin-section").scrollIntoView({ behavior: "smooth" });
-    });
-});
+
 
 // Validierung für den "Termin & Preis prüfen" Button
 document.getElementById("checkDateButton").addEventListener("click", function() {
@@ -130,10 +161,31 @@ function validateEmail(email) {
     return re.test(email);
 }
 
-// Hamburger Menu Toggle (Öffnen/Schließen der Navigation)
-const hamburgerMenu = document.getElementById('hamburger-menu');
-const navLinks = document.getElementById('nav-links');
 
-hamburgerMenu.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+
+// MutationObserver-Callback
+const observerCallback = function(mutationsList, observer) {
+  mutationsList.forEach(mutation => {
+    if (mutation.type === 'attributes') {
+      if (navLinks.classList.contains('active')) {
+        console.log('Das Menü wurde geöffnet.');
+      } else {
+        console.log('Das Menü wurde geschlossen.');
+      }
+    }
+  });
+};
+
+
+
+const hamburgerMenu = document.getElementById('hamburger-menu');
+const menu = document.getElementById('side-menu');
+
+// EventListener für das Hamburger-Menü
+hamburgerMenu.addEventListener('click', function() {
+  menu.classList.toggle('active'); // Das Menü wird ein- oder ausgeblendet
 });
+
+  
+  
+
