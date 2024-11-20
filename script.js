@@ -161,31 +161,6 @@ function validateEmail(email) {
     return re.test(email);
 }
 
-
-
-// MutationObserver-Callback
-const observerCallback = function(mutationsList, observer) {
-  mutationsList.forEach(mutation => {
-    if (mutation.type === 'attributes') {
-      if (navLinks.classList.contains('active')) {
-        console.log('Das Menü wurde geöffnet.');
-      } else {
-        console.log('Das Menü wurde geschlossen.');
-      }
-    }
-  });
-};
-
-
-
-const hamburgerMenu = document.getElementById('hamburger-menu');
-const menu = document.getElementById('side-menu');
-
-// EventListener für das Hamburger-Menü
-hamburgerMenu.addEventListener('click', function() {
-  menu.classList.toggle('active'); // Das Menü wird ein- oder ausgeblendet
-});
-
   
   
 
