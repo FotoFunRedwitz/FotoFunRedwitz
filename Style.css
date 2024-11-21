@@ -290,6 +290,42 @@ header.hidden {
     text-align: center;
 }
 
+.step1 h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.step1 p {
+    font-size: 1.1rem;
+}
+
+.step2 h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.step2 p {
+    font-size: 1.1rem;
+}
+
+.step3 h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.step3 p {
+    font-size: 1.1rem;
+}
+
+.step4 h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.step4 p {
+    font-size: 1.1rem;
+}
+
 .step h3 {
     font-size: 1.2rem;
     font-weight: bold;
@@ -923,6 +959,7 @@ position: relative;
         font-size: 1.8rem;
         width: 100%;
         margin: 0;
+        padding-bottom: 20px;
     }
 
     .connection_line{
@@ -962,6 +999,8 @@ position: relative;
     #contact-form {
         width: 100%;
     }
+
+
     .form-group {
         flex-direction: column;
         width: 100%;
@@ -976,8 +1015,8 @@ position: relative;
 
     .form-column label{
         width: 100%;
-
     }
+    
 
     .checkbox-group{
         justify-content: left;
@@ -993,6 +1032,7 @@ position: relative;
 
     .package_choice select {
         font-size: 1.0rem;
+        width: 40%;
     }
 
     .calendar-container input {
@@ -1002,6 +1042,7 @@ position: relative;
         width: 40%;
     }
 
+
     .footer-section {
         flex-direction: column;
         align-items: center;
@@ -1010,25 +1051,199 @@ position: relative;
 
 /* Media Queries for smaller screens */
 @media (max-width: 480px) {
+    body {
+        margin-top: 110px;
+    }
+
     .navbar {
         padding: 10px;
     }
 
     .hero-content h1 {
-        font-size: 1.8rem;
+        font-size: 1.3rem;
+    }
+
+    .answer_change {
+        font-size: 1rem;
     }
 
     .steps-container {
         gap: 10px;
     }
 
+    .step_picture{
+        width: 70px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .step1_body{
+        padding-left: 20px;
+        width:70%
+    }
+
+    .step2_body{
+        padding-left: 20px;
+        width:70%
+    }
+
+    .step3_body{
+        padding-left: 20px;
+        width:70%
+    }
+
+    .step4_body{
+        padding-left: 20px;
+        width:70%
+    }
+
+    .step1 h3 {
+        font-size: 1rem;
+    }
+    
+    .step1 p {
+        font-size: 0.8rem;
+        padding-top: 0px;
+    }
+
+    .step2 h3 {
+        font-size: 1rem;
+    }
+    
+    .step2 p {
+        font-size: 0.8rem;
+        padding-top: 0px;
+    }
+
+    .step3 h3 {
+        font-size: 1rem;
+    }
+    
+    .step3 p {
+        font-size: 0.8rem;
+        padding-top: 0px;
+    }
+
+    .step4 h3 {
+        font-size: 1rem;
+    }
+    
+    .step4 p {
+        font-size: 0.8rem;
+        padding-top: 0px;
+    }
+
+    .connection_line{
+        top: 70px;
+        width:  2px;
+        height: 70%;
+        left: 15%;
+        background-color: #2d3e2b;
+        z-index: 0; /* Linie hinter den Icons anzeigen */
+    }
+
+    .Bestellablauf h1{
+        padding-bottom: 20px;
+        font-size: 1.5rem;
+    }
+
+    .packages {
+        padding:0;
+        margin-bottom: 15px;
+    }
+
     .package-card {
         width: 100%;
     }
+
+    .package-cards {
+        width: 100%;
+        padding: 0;
+    }
+
+
+    .package-card_lite_header{
+        height: 85px;
+    }
+
+    .package-card_basic_header{
+        height: 85px;
+    }
+
+    .package-card_premium_header{
+        height: 85px;
+    }
+
     .package-cards ul {
         padding-left: 30px;
         padding-top: 10px;
+        padding-right: 5px;
     }
+
+    .package-cards ul li {
+        font-size: 0.8rem;
+    }
+
+    .packages h2{
+        font-size: 1.5rem;
+    }
+
+    .package-cards h3 {
+        font-size: 1.3rem;
+    }
+
+    .package-cards p {
+        font-size: 1rem;
+    }
+
+    .package_choice select {
+        font-size: 1.0rem;
+        width: 58%;
+    }
+
+    .primary-button {
+        font-size: 0.75rem;
+    }
+
+    #contact-form-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .form-column h2 {
+        font-size: 1.3rem;
+    }
+
 }
 
+/* Media Queries for smaller screens */
+@media (max-width: 360px) {
 
+    .logo-img {
+        width: 70%;
+    }
+
+    .hero-content h1 {
+        font-size: 1.0rem;
+    }
+
+    .answer_change {
+        font-size: 0.7rem;
+    }
+
+    .package_choice select {
+        font-size: 1.0rem;
+        width: 90%;
+    }
+    .hero_image_body{
+        padding: 0;
+    }
+
+    .Bestellablauf h1{
+        padding-bottom: 20px;
+        font-size: 1.1rem;
+    }
+
+    .packages h2{
+        font-size: 1.1rem;
+    }
+}
