@@ -7,23 +7,19 @@
     <link rel="stylesheet" href="Style.css">
 </head>
 <body>
-    <header>
+    <header class="header">
         <nav class="navbar">
             <div class="logo">
-                <img src="Logo.png" alt="FotoFunRedwitz Logo" class="logo-img">
+                <a href="index.html"><img src="Logo.png" alt="FotoFunRedwitz Logo" class="logo-img"></a>
             </div>
-            <div class="hamburger-menu" id="hamburger-menu">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <ul class="nav-links">
+            
+            <ul class="nav-links" id="nav-links">
                 <li><a href="index.html#hero">Die Fotobox</a></li>
+                <li><a href="index.html#Bestellablauf">Bestellablauf</a></li>
                 <li><a href="index.html#packages">FotoFun Pakete</a></li>
-                <li><a href="index.html#steps">Bestellablauf</a></li>
                 <li><a href="index.html#FAQ">FAQ</a></li>
             </ul>
-            <a href="#contact" class="button primary-button">Jetzt Anfragen</a>
+            <a href="index.html#contact-form-section" class="button primary-button">Jetzt Anfragen</a>
         </nav>
     </header>
     <main class="datenschutz-content">
@@ -207,20 +203,20 @@
 
     </main>
     <footer id="footer">
-        <div class="footer-section">
+        <div class="footer-section_left">
             <h3>Rechtliches</h3>
             <ul>
-                <li><a href="#">Allgemeine Geschäfts- & Mietbedingungen</a></li>
+                <li><a href="Bedingungen.html">Allgemeine Geschäfts- & Mietbedingungen</a></li>
                 <li><a href="Impressum.html">Impressum</a></li>
-                <li><a href="#">Widerrufsbelehrung</a></li>
-                <li><a href="#">Bezahlung</a></li>
                 <li><a href="Datenschutz.html">Datenschutz</a></li>
             </ul>
         </div>
-        <div class="footer-section">
+        <div class="footer-section_right">
             <h3>Kontakt</h3>
-            <p>FotoFunRedwitz<br>fotofunredwitz@gmail.com<br>017623492120</p>
+            <p>FotoFunRedwitz <br><a href="mailto:fotofunredwitz@gmail.com">fotofunredwitz@gmail.com</a><br>017623492120</p>
         </div>
     </footer>
+    
 </body>
+<script src="script.js"></script>
 </html>
