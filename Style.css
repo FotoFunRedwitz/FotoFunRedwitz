@@ -118,25 +118,45 @@ header.hidden {
     text-decoration: none;
 }
 
-/* Hamburger Menu for mobile view */
-.hamburger-menu {
-    display: none;
-    cursor: pointer;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.hamburger-menu span {
-    display: block;
-    width: 30px;
-    height: 4px;
+.offer {
+    display: flex;
+    justify-content: c;
+    flex-direction: row;
+    align-items: center;
     background-color: #2d3e2b;
-    border-radius: 5px;
+    color: white;
+    max-width: 1400px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: auto;
+    margin-bottom: 10px;
+    border-radius: 8px;
 }
 
-.side-menu {
-    display: none;
+.offer_body {
+    width: 80%;
 }
+
+.offer_body h1{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.offer_body h2{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.offer_prozente {
+    width: 10%;
+}
+
+.offer_prozente p{
+    font-size: 4rem;
+    text-align: center;
+}
+
 
 /* Hero Section */
 .hero {
@@ -935,7 +955,30 @@ position: relative;
         background-color: #f0f0f0;
         text-align: right
     }
+    .offer{
+        justify-content: space-around;
+    }
+    .offer_body h1{
+        font-size: 1.3rem;
+    }
+    
+    .offer_body h2{
+        font-size: 0.8rem;
+    }
 
+    .offer_prozente {
+        width: 5%;
+    }
+
+    .offer_body{
+        width: 80%;
+    }
+    
+    .offer_prozente p{
+        font-size: 2rem;
+    }
+
+    
     .hero {
         flex-direction: column;
         padding: 20px;
@@ -1162,6 +1205,14 @@ position: relative;
         padding: 10px;
     }
 
+    .offer_body h1{
+        font-size: 0.9rem;
+    }
+    
+    .offer_body h2{
+        font-size: 0.7rem;
+    }
+
     .hero-content h1 {
         font-size: 1.3rem;
     }
@@ -1360,6 +1411,14 @@ position: relative;
 
 /* Media Queries for smaller screens */
 @media (max-width: 360px) {
+
+    .offer_body h1{
+        font-size: 0.7rem;
+    }
+    
+    .offer_body h2{
+        font-size: 0.5rem;
+    }
 
     .logo-img {
         width: 70%;
