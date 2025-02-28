@@ -506,6 +506,10 @@ header.hidden {
     font-weight: bold;
 }
 
+.packages-notes{
+    padding-left: 20px;
+    font-size: 0.9rem;
+}
 
 
 #contact-form-section {
@@ -1353,6 +1357,10 @@ position: relative;
     .package_choice select {
         font-size: 1.0rem;
         width: 58%;
+    }
+
+    .packages-notes{
+        font-size: 0.6rem;
     }
 
     .primary-button {
