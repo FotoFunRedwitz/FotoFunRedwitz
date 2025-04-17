@@ -1,3 +1,40 @@
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    const slides = document.getElementsByClassName("mySlide");
+    const dots = document.getElementsByClassName("dot");
+  
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+  
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].classList.remove("active");
+    }
+  
+    for (let i = 0; i < dots.length; i++) {
+      dots[i].classList.remove("active");
+    }
+  
+    slides[slideIndex - 1].classList.add("active");
+    dots[slideIndex - 1].classList.add("active");
+  }
+  
+  
+  setInterval(() => {
+      plusSlides(1);
+    }, 4000); // alle 4 Sekunden
+
+
+
 function copyAddress(isSame) {
     const street = document.getElementById("street").value;
     const houseNumber = document.getElementById("house-number").value;
@@ -160,6 +197,7 @@ function validateEmail(email) {
     const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     return re.test(email);
 }
+
 
   
   

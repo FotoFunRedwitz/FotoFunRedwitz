@@ -197,6 +197,110 @@ header.hidden {
     border-radius: 8px;
 }
 
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    padding: 20px;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.slideshow-container:hover .prev,
+.slideshow-container:hover .next {
+  opacity: 1;
+}
+  
+  .slide-wrapper {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .mySlide {
+    flex: 1 0 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .mySlide.active {
+    display: flex;
+  }
+  
+  .mySlide img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  
+  /* Pfeile */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    font-size: 28px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .prev {
+    left: 22px;
+  }
+  .next {
+    right: 22px;
+  }
+  
+  /* Punkte */
+  .dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+    gap: 8px;
+  }
+  
+  .dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .dot.active {
+    background-color: #717171;
+  }
+  
+  
+  /* Animation */
+  .fade {
+    animation: fade 1s ease-in-out;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+
+
 .hero-button {
     background-color: #2d3e2b;
     color: #fff;
@@ -1361,6 +1465,7 @@ position: relative;
 
     .packages-notes{
         font-size: 0.6rem;
+        padding-top: 20px;
     }
 
     .primary-button {
